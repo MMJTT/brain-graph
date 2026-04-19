@@ -4,6 +4,7 @@ from datetime import date
 from pathlib import Path
 
 from brain_graph.ingest_raw import IngestRawCommand, ingest_raw_entry
+from brain_graph.export_graph import export_graph_files
 from brain_graph.lint import collect_issues
 from brain_graph.models import NOTE_TYPES, RAW_KINDS
 from brain_graph.new_note import NewNoteCommand, create_note
@@ -79,6 +80,17 @@ def _handle_lint() -> int:
     return 0
 
 
+def _handle_export_graph() -> int:
+    try:
+        json_path, mermaid_path = export_graph_files(Path.cwd())
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    print(json_path)
+    print(mermaid_path)
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -89,6 +101,8 @@ def main(argv: list[str] | None = None) -> int:
         return _handle_ingest_raw(args)
     if args.command == "lint":
         return _handle_lint()
+    if args.command == "export-graph":
+        return _handle_export_graph()
 
     return 0
 
