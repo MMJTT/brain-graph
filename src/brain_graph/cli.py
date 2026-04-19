@@ -4,6 +4,7 @@ from datetime import date
 from pathlib import Path
 
 from brain_graph.ingest_raw import IngestRawCommand, ingest_raw_entry
+from brain_graph.lint import collect_issues
 from brain_graph.models import NOTE_TYPES, RAW_KINDS
 from brain_graph.new_note import NewNoteCommand, create_note
 
@@ -67,6 +68,17 @@ def _handle_ingest_raw(args: argparse.Namespace) -> int:
     return 0
 
 
+def _handle_lint() -> int:
+    issues = collect_issues(Path.cwd())
+
+    if issues:
+        print("\n".join(issues), file=sys.stderr)
+        return 1
+
+    print("lint ok")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -75,6 +87,8 @@ def main(argv: list[str] | None = None) -> int:
         return _handle_new_note(args)
     if args.command == "ingest-raw":
         return _handle_ingest_raw(args)
+    if args.command == "lint":
+        return _handle_lint()
 
     return 0
 
