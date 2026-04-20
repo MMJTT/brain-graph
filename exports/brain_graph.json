@@ -1,4 +1,2503 @@
 {
-  "nodes": [],
-  "edges": []
+  "nodes": [
+    {
+      "id": "concept-agent-benchmarks",
+      "title": "Agent Benchmarks",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-agent-defenses",
+      "title": "Agent Defenses",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-computer-use-agents",
+      "title": "Computer-Use Agents",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-cross-modal-injection",
+      "title": "Cross-Modal Injection",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-dos-attacks",
+      "title": "DoS Attacks",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-environmental-injection",
+      "title": "Environmental Injection",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-gui-agents",
+      "title": "GUI Agents",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-jailbreak-attacks",
+      "title": "Jailbreak Attacks",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-memory-poisoning",
+      "title": "Memory Poisoning",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-multi-agent-systems",
+      "title": "Multi-Agent Systems",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-multimodal-agents",
+      "title": "Multimodal Agents",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-prompt-injection",
+      "title": "Prompt Injection",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-red-teaming",
+      "title": "Red Teaming",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "concept-web-agents",
+      "title": "Web Agents",
+      "node_type": "concept",
+      "status": "seed"
+    },
+    {
+      "id": "map-agent-security-seed-corpus",
+      "title": "Agent Security Seed Corpus",
+      "node_type": "map",
+      "status": "seed"
+    },
+    {
+      "id": "paper-agent-poison",
+      "title": "AGENT POISON: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-auto-dan",
+      "title": "AUTO DAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-agentdojo",
+      "title": "AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-agentsys",
+      "title": "AgentSys: Secure and Dynamic LLM Agents Through Explicit Hierarchical Memory Management",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-autodefense",
+      "title": "AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-breaking-agents",
+      "title": "Breaking Agents: Compromising Autonomous LLM Agents Through Malfunction Amplification",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-caution-for-the-environment",
+      "title": "Caution for the Environment: Multimodal LLM Agents are Susceptible to Environmental Distractions",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-pdos",
+      "title": "Denial-of-Service Poisoning Attacks on Large Language Models",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-eva",
+      "title": "EVA: Red-Teaming GUI Agents via Evolving Indirect Prompt Injection",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-aeia-mn",
+      "title": "Evaluating the Robustness of Multimodal Agents Against Active Environmental Injection Attacks",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-hijacking-jarvis",
+      "title": "Hijacking JARVIS: Benchmarking Mobile GUI Agents against Unprivileged Third Parties",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-crossinject",
+      "title": "Manipulating Multimodal Agents via Cross-Modal Prompt Injection",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-not-what-youve-signed-up-for",
+      "title": "Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-osworld",
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-red-teaming-multi-agent-systems",
+      "title": "Red-Teaming LLM Multi-Agent Systems via Communication Attacks",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-redteamcua",
+      "title": "RedTeamCUA: Realistic Adversarial Testing of Computer-Use Agents in Hybrid Web-OS Environments",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-fine-print-injection",
+      "title": "The Obvious Invisible Threat: LLM-Powered GUI Agents' Vulnerability to Fine-Print Injections",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-thinktrap",
+      "title": "ThinkTrap: Denial-of-Service Attacks against Black-box LLM Services via Infinite Thinking",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-udora",
+      "title": "UDora: A Unified Red Teaming Framework against LLM Agents by Dynamically Hijacking Their Own Reasoning",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-visualwebarena",
+      "title": "VisualWebArena: Evaluating Multimodal Agents on Realistic Visually Grounded Web Tasks",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-webarena",
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "node_type": "paper",
+      "status": "seed"
+    },
+    {
+      "id": "paper-webinject",
+      "title": "WebInject: Prompt Injection Attack to Web Agents",
+      "node_type": "paper",
+      "status": "seed"
+    }
+  ],
+  "edges": [
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-agentdojo",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-hijacking-jarvis",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-webarena",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-visualwebarena",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-osworld",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-redteamcua",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "concept-web-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "concept-computer-use-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "concept-multimodal-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-benchmarks",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "paper-agentdojo",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "paper-agentsys",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "paper-autodefense",
+      "type": "supports"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "concept-red-teaming",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "concept-memory-poisoning",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "concept-jailbreak-attacks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-agent-defenses",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "paper-redteamcua",
+      "type": "supports"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "paper-osworld",
+      "type": "supports"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "paper-hijacking-jarvis",
+      "type": "supports"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "concept-gui-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "concept-agent-benchmarks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "concept-multimodal-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-computer-use-agents",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "paper-crossinject",
+      "type": "supports"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "paper-aeia-mn",
+      "type": "supports"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "paper-eva",
+      "type": "supports"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "concept-prompt-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "concept-multimodal-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "concept-environmental-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-cross-modal-injection",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-dos-attacks",
+      "target": "paper-pdos",
+      "type": "supports"
+    },
+    {
+      "source": "concept-dos-attacks",
+      "target": "paper-thinktrap",
+      "type": "supports"
+    },
+    {
+      "source": "concept-dos-attacks",
+      "target": "concept-jailbreak-attacks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-dos-attacks",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-dos-attacks",
+      "target": "paper-pdos",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-dos-attacks",
+      "target": "paper-thinktrap",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-aeia-mn",
+      "type": "supports"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-caution-for-the-environment",
+      "type": "supports"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-eva",
+      "type": "supports"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-fine-print-injection",
+      "type": "supports"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "concept-prompt-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "concept-multimodal-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "concept-gui-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-caution-for-the-environment",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-environmental-injection",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-hijacking-jarvis",
+      "type": "supports"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-eva",
+      "type": "supports"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-fine-print-injection",
+      "type": "supports"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-redteamcua",
+      "type": "supports"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "concept-multimodal-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "concept-computer-use-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "concept-prompt-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-gui-agents",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "paper-auto-dan",
+      "type": "supports"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "paper-autodefense",
+      "type": "supports"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "concept-agent-defenses",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "concept-dos-attacks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "concept-dos-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-jailbreak-attacks",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "paper-agent-poison",
+      "type": "supports"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "paper-agentsys",
+      "type": "supports"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "concept-agent-defenses",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "concept-multi-agent-systems",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-memory-poisoning",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "paper-autodefense",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "paper-udora",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "concept-red-teaming",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "concept-agent-defenses",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "concept-memory-poisoning",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multi-agent-systems",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-aeia-mn",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-caution-for-the-environment",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-crossinject",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-visualwebarena",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-osworld",
+      "type": "supports"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "concept-gui-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "concept-web-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "concept-agent-benchmarks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-caution-for-the-environment",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-multimodal-agents",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-agentdojo",
+      "type": "supports"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "supports"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-webinject",
+      "type": "supports"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-eva",
+      "type": "supports"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-fine-print-injection",
+      "type": "supports"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-crossinject",
+      "type": "supports"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-environmental-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-cross-modal-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-web-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-gui-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-cross-modal-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-webinject",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-prompt-injection",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-agent-poison",
+      "type": "supports"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-eva",
+      "type": "supports"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "supports"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-redteamcua",
+      "type": "supports"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-udora",
+      "type": "supports"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "concept-agent-benchmarks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "concept-agent-defenses",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "concept-multi-agent-systems",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-red-teaming",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-webarena",
+      "type": "supports"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-visualwebarena",
+      "type": "supports"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-webinject",
+      "type": "supports"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "supports"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "concept-agent-benchmarks",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "concept-prompt-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "concept-multimodal-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-webinject",
+      "type": "body_link"
+    },
+    {
+      "source": "concept-web-agents",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-prompt-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-red-teaming",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-agent-benchmarks",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-cross-modal-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-dos-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-webinject",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-caution-for-the-environment",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-breaking-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-pdos",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-thinktrap",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "concept-memory-poisoning",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "concept-red-teaming",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "concept-agent-defenses",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "paper-agentsys",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "paper-breaking-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "paper-agentdojo",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "paper-breaking-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agent-poison",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "concept-jailbreak-attacks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "paper-autodefense",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "paper-thinktrap",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "paper-pdos",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "paper-thinktrap",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "paper-pdos",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-auto-dan",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "concept-prompt-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "concept-agent-benchmarks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "concept-agent-defenses",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "paper-webinject",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "paper-udora",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "paper-webinject",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentdojo",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "concept-agent-defenses",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "concept-memory-poisoning",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "paper-agent-poison",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "paper-breaking-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "paper-autodefense",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "paper-breaking-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-agentsys",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "concept-agent-defenses",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "concept-jailbreak-attacks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "concept-multi-agent-systems",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "paper-auto-dan",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "paper-udora",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "paper-agentsys",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-autodefense",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "concept-red-teaming",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "concept-agent-defenses",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "paper-agentsys",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "paper-agent-poison",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "paper-autodefense",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-breaking-agents",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "concept-multimodal-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "concept-environmental-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "paper-aeia-mn",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "paper-eva",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "paper-crossinject",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-caution-for-the-environment",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-pdos",
+      "target": "concept-dos-attacks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-pdos",
+      "target": "paper-thinktrap",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-pdos",
+      "target": "paper-auto-dan",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-pdos",
+      "target": "paper-thinktrap",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-pdos",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-pdos",
+      "target": "concept-dos-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-prompt-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-environmental-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-gui-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-red-teaming",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-eva",
+      "target": "paper-fine-print-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-eva",
+      "target": "paper-crossinject",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-eva",
+      "target": "paper-redteamcua",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-eva",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-eva",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "concept-multimodal-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "concept-environmental-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "concept-cross-modal-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "paper-caution-for-the-environment",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "paper-eva",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "paper-crossinject",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "paper-caution-for-the-environment",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-aeia-mn",
+      "target": "concept-cross-modal-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "concept-gui-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "concept-computer-use-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "concept-agent-benchmarks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "paper-redteamcua",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "paper-eva",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "paper-fine-print-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-hijacking-jarvis",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "concept-prompt-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "concept-cross-modal-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "concept-multimodal-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "paper-eva",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "paper-fine-print-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "paper-aeia-mn",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "concept-cross-modal-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-crossinject",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "concept-prompt-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "concept-web-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "paper-webinject",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "paper-agentdojo",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "paper-breaking-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "paper-webinject",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "paper-breaking-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-not-what-youve-signed-up-for",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "concept-multimodal-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "concept-computer-use-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "concept-agent-benchmarks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "paper-webarena",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "paper-visualwebarena",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "paper-redteamcua",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-osworld",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "concept-red-teaming",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "concept-multi-agent-systems",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "paper-udora",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "paper-autodefense",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "paper-agentdojo",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-red-teaming-multi-agent-systems",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-computer-use-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-red-teaming",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-agent-benchmarks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-gui-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "paper-hijacking-jarvis",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "paper-eva",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "paper-osworld",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-redteamcua",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "concept-prompt-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "concept-environmental-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "concept-gui-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "paper-eva",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "paper-crossinject",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "paper-hijacking-jarvis",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-fine-print-injection",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-thinktrap",
+      "target": "concept-dos-attacks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-thinktrap",
+      "target": "paper-pdos",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-thinktrap",
+      "target": "paper-auto-dan",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-thinktrap",
+      "target": "paper-pdos",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-thinktrap",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-thinktrap",
+      "target": "concept-dos-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-udora",
+      "target": "concept-red-teaming",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-udora",
+      "target": "concept-multi-agent-systems",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-udora",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-udora",
+      "target": "paper-agentdojo",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-udora",
+      "target": "paper-autodefense",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-udora",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-udora",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-udora",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-udora",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-udora",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "concept-web-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "concept-multimodal-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "concept-agent-benchmarks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "paper-webarena",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "paper-osworld",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "paper-redteamcua",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-visualwebarena",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "concept-web-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "concept-agent-benchmarks",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "paper-visualwebarena",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "paper-osworld",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webarena",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "concept-prompt-injection",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "concept-web-agents",
+      "type": "mentions"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "paper-agentdojo",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "paper-visualwebarena",
+      "type": "related_to"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "paper-webinject",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    }
+  ]
 }
