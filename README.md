@@ -2,10 +2,16 @@
 
 Brain Graph V1.
 
-Run the CLI help with:
+## CLI
 
-`python -m pip install -e . && brain-graph --help`
+- `python -m brain_graph.cli new-note --type paper --title "MemoryGraft" --id paper-memorygraft`
+- `python -m brain_graph.cli ingest-raw --kind paper --slug memorygraft --title "MemoryGraft" --source-url ...`
+- `python -m brain_graph.cli lint`
+- `python -m brain_graph.cli export-graph`
 
-Run the Task 1 test with:
+## Workspace Layout
 
-`pytest tests/test_cli.py -q`
+- `raw/`: append-only source captures grouped by kind, such as `papers/`, `clips/`, and `metadata/`.
+- `wiki/`: curated graph notes grouped by node type, such as `papers/`, `concepts/`, `methods/`, `gaps/`, `authors/`, and `maps/`.
+- `views/`: derived views and graph-facing artifacts, including canvas and dataview output.
+- `shared/research.md`: shared research notes and cross-cutting context for the graph.
