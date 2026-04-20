@@ -76,3 +76,27 @@ def test_compile_batch_refreshes_exports_canvas_and_queue_map(tmp_path, monkeypa
     assert queue_map.exists()
     graph = json.loads((tmp_path / "exports" / "brain_graph.json").read_text(encoding="utf-8"))
     assert any(node["title"] == "Imported Paper Queue" for node in graph["nodes"])
+
+
+def test_compile_batch_regenerates_topical_maps_from_compiled_papers(tmp_path, monkeypatch):
+    _import_seed_pdf(tmp_path, monkeypatch, "MemoryGraft", "Prompt injection benchmark abstract.", "2026-04-20")
+    _import_seed_pdf(tmp_path, monkeypatch, "AgentShield", "Defense benchmark abstract.", "2026-04-21")
+    _import_seed_pdf(tmp_path, monkeypatch, "VisionGuard", "Multimodal benchmark abstract.", "2026-04-22")
+
+    compile_batch(tmp_path, "raw/papers", None)
+
+    attack_map = tmp_path / "wiki" / "maps" / "Attack Paper Map.md"
+    defense_map = tmp_path / "wiki" / "maps" / "Defense Paper Map.md"
+    benchmark_map = tmp_path / "wiki" / "maps" / "Benchmark Paper Map.md"
+    system_map = tmp_path / "wiki" / "maps" / "System Paper Map.md"
+    assert attack_map.exists()
+    assert defense_map.exists()
+    assert benchmark_map.exists()
+    assert system_map.exists()
+
+    attack_frontmatter, attack_body = load_frontmatter(attack_map.read_text(encoding="utf-8"))
+    system_frontmatter, system_body = load_frontmatter(system_map.read_text(encoding="utf-8"))
+    assert "MemoryGraft" in attack_frontmatter["includes"]
+    assert "[[MemoryGraft]]" in attack_body
+    assert "VisionGuard" in system_frontmatter["includes"]
+    assert "[[VisionGuard]]" in system_body

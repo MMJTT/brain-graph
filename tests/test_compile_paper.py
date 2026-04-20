@@ -35,6 +35,39 @@ def _import_seed_paper(tmp_path: Path, monkeypatch) -> None:
     )
 
 
+def _import_gap_seed_paper(tmp_path: Path, monkeypatch) -> None:
+    source_pdf = tmp_path / "IndirectAttack.pdf"
+    source_pdf.write_bytes(b"%PDF-1.4 fake pdf bytes")
+    monkeypatch.setattr(
+        "brain_graph.import_paper.extract_pdf_text",
+        lambda path: ExtractedPaper(
+            title="IndirectAttack",
+            authors=["Carol Researcher", "Dan Builder"],
+            abstract=(
+                "Indirect prompt injection remains a benchmark challenge for multimodal agents. "
+                "We use red teaming as the primary method and highlight a cross-modal evaluation gap."
+            ),
+            full_text=(
+                "IndirectAttack\nCarol Researcher\nDan Builder\nAbstract\n"
+                "Indirect prompt injection remains a benchmark challenge for multimodal agents.\n\n"
+                "Method: We use red teaming as the primary method.\n"
+                "Gap: A cross-modal evaluation gap remains unsolved.\n"
+            ),
+            extractor="pdftotext",
+        ),
+    )
+    import_paper_source(
+        tmp_path,
+        ImportPaperCommand(
+            pdf_path=str(source_pdf),
+            url=None,
+            title=None,
+            slug=None,
+        ),
+        "2026-04-20",
+    )
+
+
 def test_compile_imported_paper_creates_paper_note(tmp_path, monkeypatch):
     _import_seed_paper(tmp_path, monkeypatch)
 
@@ -85,3 +118,62 @@ def test_compile_imported_paper_is_idempotent(tmp_path, monkeypatch):
     concept_note = tmp_path / "wiki" / "concepts" / "Prompt Injection.md"
     frontmatter, _ = load_frontmatter(concept_note.read_text(encoding="utf-8"))
     assert frontmatter["paper_refs"] == ["MemoryGraft"]
+
+
+def test_compile_imported_paper_creates_author_method_and_gap_notes(tmp_path, monkeypatch):
+    _import_gap_seed_paper(tmp_path, monkeypatch)
+
+    compile_imported_paper(tmp_path, "indirectattack")
+
+    author_note = tmp_path / "wiki" / "authors" / "Carol Researcher.md"
+    method_note = tmp_path / "wiki" / "methods" / "Red Teaming Method.md"
+    gap_note = tmp_path / "wiki" / "gaps" / "Cross-Modal Evaluation Gap.md"
+    assert author_note.exists()
+    assert method_note.exists()
+    assert gap_note.exists()
+
+    author_frontmatter, _ = load_frontmatter(author_note.read_text(encoding="utf-8"))
+    method_frontmatter, _ = load_frontmatter(method_note.read_text(encoding="utf-8"))
+    gap_frontmatter, _ = load_frontmatter(gap_note.read_text(encoding="utf-8"))
+    assert author_frontmatter["paper_refs"] == ["IndirectAttack"]
+    assert method_frontmatter["introduced_by"] == ["IndirectAttack"]
+    assert gap_frontmatter["raised_by"] == ["IndirectAttack"]
+
+
+def test_compile_imported_paper_normalizes_concept_aliases(tmp_path, monkeypatch):
+    _import_gap_seed_paper(tmp_path, monkeypatch)
+
+    compile_imported_paper(tmp_path, "indirectattack")
+
+    paper_note = tmp_path / "wiki" / "papers" / "IndirectAttack.md"
+    concept_note = tmp_path / "wiki" / "concepts" / "Prompt Injection.md"
+    paper_frontmatter, _ = load_frontmatter(paper_note.read_text(encoding="utf-8"))
+    concept_frontmatter, _ = load_frontmatter(concept_note.read_text(encoding="utf-8"))
+    assert "Prompt Injection" in paper_frontmatter["concept_refs"]
+    assert concept_frontmatter["aliases"] == ["Indirect Prompt Injection"]
+
+
+def test_compile_imported_paper_supports_openrouter_backend(tmp_path, monkeypatch):
+    _import_seed_paper(tmp_path, monkeypatch)
+    monkeypatch.setattr(
+        "brain_graph.compile_paper.compile_with_openrouter",
+        lambda metadata, full_text, model: {
+            "summary": "OpenRouter summary.",
+            "concepts": [{"title": "Prompt Injection", "aliases": [], "related": []}],
+            "methods": [{"title": "Red Teaming Method"}],
+            "gaps": [{"title": "Cross-Modal Evaluation Gap", "gap_kind": "evaluation"}],
+            "research_notes": ["Cross-check against stronger baselines."],
+        },
+    )
+
+    compile_imported_paper(tmp_path, "memorygraft", compiler="openrouter", model="openai/gpt-4.1-mini")
+
+    paper_note = tmp_path / "wiki" / "papers" / "MemoryGraft.md"
+    method_note = tmp_path / "wiki" / "methods" / "Red Teaming Method.md"
+    gap_note = tmp_path / "wiki" / "gaps" / "Cross-Modal Evaluation Gap.md"
+    frontmatter, body = load_frontmatter(paper_note.read_text(encoding="utf-8"))
+    assert method_note.exists()
+    assert gap_note.exists()
+    assert frontmatter["method_refs"] == ["Red Teaming Method"]
+    assert frontmatter["gap_refs"] == ["Cross-Modal Evaluation Gap"]
+    assert "OpenRouter summary." in body

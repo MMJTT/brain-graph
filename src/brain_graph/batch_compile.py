@@ -8,9 +8,16 @@ from brain_graph.compile_paper import compile_imported_paper
 from brain_graph.export_graph import export_graph_files
 from brain_graph.frontmatter import dump_frontmatter, load_frontmatter
 from brain_graph.lint import collect_issues
+from brain_graph.topic_maps import refresh_topic_maps
 
 
-def compile_batch(project_root: Path, source: str, limit: int | None) -> list[Path]:
+def compile_batch(
+    project_root: Path,
+    source: str,
+    limit: int | None,
+    compiler: str = "heuristic",
+    model: str | None = None,
+) -> list[Path]:
     root = Path(project_root)
     source_dir = root / source
     compiled_paths: list[Path] = []
@@ -23,13 +30,14 @@ def compile_batch(project_root: Path, source: str, limit: int | None) -> list[Pa
         slug = frontmatter.get("slug")
         if not isinstance(slug, str):
             continue
-        payload = compile_imported_paper(root, slug)
+        payload = compile_imported_paper(root, slug, compiler=compiler, model=model)
         paper_title = payload["paper"]["title"]
         compiled_paths.append(root / "wiki" / "papers" / f"{paper_title}.md")
         compiled_titles.append(paper_title)
         if limit is not None and len(compiled_paths) >= limit:
             break
 
+    refresh_topic_maps(root)
     _ensure_queue_map(root, compiled_titles)
     _ensure_compilation_queue_view(root)
 

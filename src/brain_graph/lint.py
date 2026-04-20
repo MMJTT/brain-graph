@@ -46,6 +46,7 @@ def collect_issues(project_root: Path) -> list[str]:
     ids: set[str] = set()
     duplicate_titles: set[str] = set()
     duplicate_ids: set[str] = set()
+    alias_to_locations: dict[str, set[str]] = {}
 
     for path in note_paths:
         text = path.read_text(encoding="utf-8")
@@ -66,10 +67,25 @@ def collect_issues(project_root: Path) -> list[str]:
                 duplicate_ids.add(note_id)
             ids.add(note_id)
 
+        for alias in _as_list(data.get("aliases")):
+            normalized_alias = _normalize_reference(_stringify(alias))
+            if not normalized_alias:
+                continue
+            alias_to_locations.setdefault(normalized_alias, set()).add(path.as_posix())
+
     issues: list[str] = []
     for path, data, body in notes:
         issues.extend(
-            _collect_note_issues(path, data, body, titles, ids, duplicate_titles, duplicate_ids)
+            _collect_note_issues(
+                path,
+                data,
+                body,
+                titles,
+                ids,
+                duplicate_titles,
+                duplicate_ids,
+                alias_to_locations,
+            )
         )
 
     return issues
@@ -83,6 +99,7 @@ def _collect_note_issues(
     ids: set[str],
     duplicate_titles: set[str],
     duplicate_ids: set[str],
+    alias_to_locations: dict[str, set[str]],
 ) -> list[str]:
     issues: list[str] = []
     location = path.as_posix()
@@ -117,6 +134,13 @@ def _collect_note_issues(
     if isinstance(title, str) and title in duplicate_titles:
         issues.append(f"{location}: duplicate title: {title}")
 
+    for alias in _as_list(data.get("aliases")):
+        normalized_alias = _normalize_reference(_stringify(alias))
+        if not normalized_alias:
+            continue
+        if len(alias_to_locations.get(normalized_alias, set())) > 1:
+            issues.append(f"{location}: duplicate alias: {normalized_alias}")
+
     for match in WIKILINK_RE.finditer(body):
         target = _normalize_reference(match.group(1))
         if target and target not in titles:
@@ -130,10 +154,32 @@ def _collect_note_issues(
             if reference not in titles and reference not in ids:
                 issues.append(f"{location}: unresolved relation reference in {field}: {reference}")
 
+    issues.extend(_collect_orphan_issues(location, data))
+
     return issues
 
 
+def _collect_orphan_issues(location: str, data: dict[str, object]) -> list[str]:
+    tags = {str(tag) for tag in _as_list(data.get("tags"))}
+    if "compiled" not in tags:
+        return []
+    node_type = data.get("node_type")
+    if node_type == "author" and not _as_list(data.get("paper_refs")):
+        return [f"{location}: orphaned generated author note"]
+    if node_type == "method" and not _as_list(data.get("introduced_by")):
+        return [f"{location}: orphaned generated method note"]
+    if node_type == "gap" and not _as_list(data.get("raised_by")):
+        return [f"{location}: orphaned generated gap note"]
+    if node_type == "concept" and not (
+        _as_list(data.get("paper_refs")) or _as_list(data.get("method_refs"))
+    ):
+        return [f"{location}: orphaned generated concept note"]
+    return []
+
+
 def _as_list(value: object) -> list[object]:
+    if value is None:
+        return []
     if isinstance(value, list):
         return value
     if value == "[]":

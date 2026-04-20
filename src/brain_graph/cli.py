@@ -5,12 +5,14 @@ from pathlib import Path
 
 from brain_graph.batch_compile import compile_batch
 from brain_graph.compile_paper import compile_imported_paper
+from brain_graph.discover_papers import discover_papers, import_discovered_papers
 from brain_graph.import_paper import ImportPaperCommand, import_paper_source
 from brain_graph.ingest_raw import IngestRawCommand, ingest_raw_entry
 from brain_graph.export_graph import export_graph_files
 from brain_graph.lint import collect_issues
-from brain_graph.models import NOTE_TYPES, RAW_KINDS
+from brain_graph.models import COMPILER_BACKENDS, DISCOVERY_PROVIDERS, NOTE_TYPES, RAW_KINDS
 from brain_graph.new_note import NewNoteCommand, create_note
+from brain_graph.research_loop import run_research_loop
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -39,12 +41,32 @@ def build_parser() -> argparse.ArgumentParser:
 
     compile_paper = subparsers.add_parser("compile-paper", help="Compile one imported paper.")
     compile_paper.add_argument("--slug", required=True)
+    compile_paper.add_argument("--compiler", choices=COMPILER_BACKENDS, default="heuristic")
+    compile_paper.add_argument("--model")
 
     compile_batch = subparsers.add_parser(
         "compile-batch", help="Compile imported papers in batch."
     )
     compile_batch.add_argument("--source", default="raw/papers")
     compile_batch.add_argument("--limit", type=int)
+    compile_batch.add_argument("--compiler", choices=COMPILER_BACKENDS, default="heuristic")
+    compile_batch.add_argument("--model")
+
+    discover_papers = subparsers.add_parser(
+        "discover-papers", help="Discover papers from remote scholarly providers."
+    )
+    discover_papers.add_argument("--query", required=True)
+    discover_papers.add_argument("--provider", choices=DISCOVERY_PROVIDERS, default="both")
+    discover_papers.add_argument("--limit", type=int, default=10)
+
+    research_loop = subparsers.add_parser(
+        "research-loop", help="Run discovery, compile, and graph refresh in one command."
+    )
+    research_loop.add_argument("--query", required=True)
+    research_loop.add_argument("--provider", choices=DISCOVERY_PROVIDERS, default="both")
+    research_loop.add_argument("--limit", type=int, default=10)
+    research_loop.add_argument("--compiler", choices=COMPILER_BACKENDS, default="heuristic")
+    research_loop.add_argument("--model")
 
     subparsers.add_parser("lint", help="Lint the graph.")
     subparsers.add_parser("export-graph", help="Export the graph.")
@@ -132,7 +154,12 @@ def _handle_import_paper(args: argparse.Namespace) -> int:
 
 def _handle_compile_paper(args: argparse.Namespace) -> int:
     try:
-        payload = compile_imported_paper(Path.cwd(), args.slug)
+        payload = compile_imported_paper(
+            Path.cwd(),
+            args.slug,
+            compiler=args.compiler,
+            model=args.model,
+        )
     except (FileNotFoundError, ValueError) as exc:
         print(exc, file=sys.stderr)
         return 1
@@ -142,12 +169,49 @@ def _handle_compile_paper(args: argparse.Namespace) -> int:
 
 def _handle_compile_batch(args: argparse.Namespace) -> int:
     try:
-        compiled_paths = compile_batch(Path.cwd(), args.source, args.limit)
+        compiled_paths = compile_batch(
+            Path.cwd(),
+            args.source,
+            args.limit,
+            compiler=args.compiler,
+            model=args.model,
+        )
     except ValueError as exc:
         print(exc, file=sys.stderr)
         return 1
     for path in compiled_paths:
         print(path)
+    return 0
+
+
+def _handle_discover_papers(args: argparse.Namespace) -> int:
+    try:
+        discovered = discover_papers(args.query, args.provider, args.limit)
+        raw_paths = import_discovered_papers(Path.cwd(), discovered, date.today().isoformat())
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    for path in raw_paths:
+        print(path)
+    return 0
+
+
+def _handle_research_loop(args: argparse.Namespace) -> int:
+    try:
+        result = run_research_loop(
+            Path.cwd(),
+            query=args.query,
+            provider=args.provider,
+            limit=args.limit,
+            compiler=args.compiler,
+            model=args.model,
+        )
+    except ValueError as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    for path in result["compiled_paths"]:
+        print(path)
+    print(result["research_path"])
     return 0
 
 
@@ -165,6 +229,10 @@ def main(argv: list[str] | None = None) -> int:
         return _handle_compile_paper(args)
     if args.command == "compile-batch":
         return _handle_compile_batch(args)
+    if args.command == "discover-papers":
+        return _handle_discover_papers(args)
+    if args.command == "research-loop":
+        return _handle_research_loop(args)
     if args.command == "lint":
         return _handle_lint()
     if args.command == "export-graph":
