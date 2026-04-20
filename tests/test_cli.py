@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from brain_graph.cli import build_parser, main
 from brain_graph.frontmatter import dump_frontmatter, load_frontmatter
 
@@ -89,6 +91,79 @@ def test_cli_parser_wires_expected_subcommands():
     )
     assert parser.parse_args(["lint"]).command == "lint"
     assert parser.parse_args(["export-graph"]).command == "export-graph"
+    assert (
+        parser.parse_args(
+            [
+                "import-paper",
+                "--pdf",
+                "/tmp/memorygraft.pdf",
+            ]
+        ).command
+        == "import-paper"
+    )
+    assert (
+        parser.parse_args(
+            [
+                "compile-paper",
+                "--slug",
+                "memorygraft",
+            ]
+        ).command
+        == "compile-paper"
+    )
+    assert (
+        parser.parse_args(
+            [
+                "compile-batch",
+                "--source",
+                "raw/papers",
+                "--limit",
+                "2",
+            ]
+        ).command
+        == "compile-batch"
+    )
+    assert (
+        parser.parse_args(["import-paper", "--pdf", "/tmp/memorygraft.pdf"]).command
+        == "import-paper"
+    )
+    assert (
+        parser.parse_args(["import-paper", "--url", "https://arxiv.org/abs/2512.16962"]).command
+        == "import-paper"
+    )
+    assert parser.parse_args(["compile-paper", "--slug", "memorygraft"]).command == "compile-paper"
+    assert parser.parse_args(["compile-batch"]).command == "compile-batch"
+    assert (
+        parser.parse_args(["compile-batch", "--source", "raw/papers", "--limit", "20"]).command
+        == "compile-batch"
+    )
+
+
+def test_compile_status_constants_are_stable():
+    from brain_graph import models
+
+    assert models.COMPILE_STATUS_IMPORTED == "imported"
+    assert models.COMPILE_STATUS_COMPILED == "compiled"
+    assert models.COMPILE_STATUS_FAILED == "failed"
+
+
+@pytest.mark.parametrize(
+    ("argv", "expected_error"),
+    [
+        (["import-paper", "--pdf", "/tmp/memorygraft.pdf"], "NotImplementedError"),
+        (["compile-paper", "--slug", "memorygraft"], "NotImplementedError"),
+        (["compile-batch"], "NotImplementedError"),
+    ],
+)
+def test_cli_p0_commands_report_not_implemented(argv, monkeypatch, capsys, expected_error):
+    monkeypatch.chdir(Path.cwd())
+
+    exit_code = main(argv)
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert expected_error in captured.err
+    assert captured.out == ""
 
 
 def test_cli_lint_reports_ok_for_clean_workspace(tmp_path, monkeypatch, capsys):

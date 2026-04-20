@@ -26,6 +26,23 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_raw.add_argument("--title", required=True)
     ingest_raw.add_argument("--source-url")
     ingest_raw.add_argument("--summary")
+
+    import_paper = subparsers.add_parser("import-paper", help="Import a paper source.")
+    import_source = import_paper.add_mutually_exclusive_group(required=True)
+    import_source.add_argument("--pdf")
+    import_source.add_argument("--url")
+    import_paper.add_argument("--title")
+    import_paper.add_argument("--slug")
+
+    compile_paper = subparsers.add_parser("compile-paper", help="Compile one imported paper.")
+    compile_paper.add_argument("--slug", required=True)
+
+    compile_batch = subparsers.add_parser(
+        "compile-batch", help="Compile imported papers in batch."
+    )
+    compile_batch.add_argument("--source", default="raw/papers")
+    compile_batch.add_argument("--limit", type=int)
+
     subparsers.add_parser("lint", help="Lint the graph.")
     subparsers.add_parser("export-graph", help="Export the graph.")
 
@@ -93,6 +110,21 @@ def _handle_export_graph() -> int:
     return 0
 
 
+def _handle_import_paper() -> int:
+    print("NotImplementedError: import-paper is not implemented yet", file=sys.stderr)
+    return 1
+
+
+def _handle_compile_paper() -> int:
+    print("NotImplementedError: compile-paper is not implemented yet", file=sys.stderr)
+    return 1
+
+
+def _handle_compile_batch() -> int:
+    print("NotImplementedError: compile-batch is not implemented yet", file=sys.stderr)
+    return 1
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -101,6 +133,12 @@ def main(argv: list[str] | None = None) -> int:
         return _handle_new_note(args)
     if args.command == "ingest-raw":
         return _handle_ingest_raw(args)
+    if args.command == "import-paper":
+        return _handle_import_paper()
+    if args.command == "compile-paper":
+        return _handle_compile_paper()
+    if args.command == "compile-batch":
+        return _handle_compile_batch()
     if args.command == "lint":
         return _handle_lint()
     if args.command == "export-graph":
