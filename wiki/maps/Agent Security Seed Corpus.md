@@ -13,8 +13,16 @@ related:
   - Prompt Injection
   - Red Teaming
   - Agent Benchmarks
+  - Attack Paper Map
+  - Defense Paper Map
+  - Benchmark Paper Map
+  - System Paper Map
 focus: Initial survey map seeded from the local agent-papers PDF corpus.
 includes:
+  - Attack Paper Map
+  - Defense Paper Map
+  - Benchmark Paper Map
+  - System Paper Map
   - Prompt Injection
   - Environmental Injection
   - Cross-Modal Injection
@@ -61,6 +69,12 @@ questions:
 
 ## Focus
 This map is the first connected view built from the local PDF corpus in `agent-papers`.
+
+## Topic Maps
+- [[Attack Paper Map]]
+- [[Defense Paper Map]]
+- [[Benchmark Paper Map]]
+- [[System Paper Map]]
 
 ## Included Nodes
 - [[Prompt Injection]]

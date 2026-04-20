@@ -91,6 +91,30 @@
       "status": "seed"
     },
     {
+      "id": "map-attack-paper-map",
+      "title": "Attack Paper Map",
+      "node_type": "map",
+      "status": "seed"
+    },
+    {
+      "id": "map-benchmark-paper-map",
+      "title": "Benchmark Paper Map",
+      "node_type": "map",
+      "status": "seed"
+    },
+    {
+      "id": "map-defense-paper-map",
+      "title": "Defense Paper Map",
+      "node_type": "map",
+      "status": "seed"
+    },
+    {
+      "id": "map-system-paper-map",
+      "title": "System Paper Map",
+      "node_type": "map",
+      "status": "seed"
+    },
+    {
       "id": "paper-agent-poison",
       "title": "AGENT POISON: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases",
       "node_type": "paper",
@@ -1151,6 +1175,46 @@
     },
     {
       "source": "map-agent-security-seed-corpus",
+      "target": "map-attack-paper-map",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-defense-paper-map",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-benchmark-paper-map",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-system-paper-map",
+      "type": "related_to"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-attack-paper-map",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-defense-paper-map",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-benchmark-paper-map",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
+      "target": "map-system-paper-map",
+      "type": "body_link"
+    },
+    {
+      "source": "map-agent-security-seed-corpus",
       "target": "concept-prompt-injection",
       "type": "body_link"
     },
@@ -1327,6 +1391,341 @@
     {
       "source": "map-agent-security-seed-corpus",
       "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-prompt-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-environmental-injection",
+      "type": "related_to"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-red-teaming",
+      "type": "related_to"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-prompt-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-environmental-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-cross-modal-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-red-teaming",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "concept-dos-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-not-what-youve-signed-up-for",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-webinject",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-eva",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-fine-print-injection",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-crossinject",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-caution-for-the-environment",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-breaking-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-pdos",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-thinktrap",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "map-attack-paper-map",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-agent-benchmarks",
+      "type": "related_to"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-web-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-computer-use-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-agent-benchmarks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-web-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-gui-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-multimodal-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-hijacking-jarvis",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-aeia-mn",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "map-benchmark-paper-map",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-agent-defenses",
+      "type": "related_to"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-memory-poisoning",
+      "type": "related_to"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-jailbreak-attacks",
+      "type": "related_to"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-memory-poisoning",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-jailbreak-attacks",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-agentdojo",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-agent-poison",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-auto-dan",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-red-teaming-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "map-defense-paper-map",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "concept-computer-use-agents",
+      "type": "related_to"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "concept-multi-agent-systems",
+      "type": "related_to"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "concept-agent-defenses",
+      "type": "related_to"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "concept-computer-use-agents",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "concept-multi-agent-systems",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "concept-agent-defenses",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-agentsys",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-autodefense",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-udora",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-osworld",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-redteamcua",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-visualwebarena",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-webarena",
+      "type": "body_link"
+    },
+    {
+      "source": "map-system-paper-map",
+      "target": "paper-hijacking-jarvis",
       "type": "body_link"
     },
     {
