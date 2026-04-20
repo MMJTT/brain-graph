@@ -35,6 +35,10 @@ WIKI_DIRECTORY_BY_NOTE_TYPE = {
     NOTE_TYPE_MAP: "maps",
 }
 
+NOTE_TYPE_BY_WIKI_DIRECTORY = {
+    directory: note_type for note_type, directory in WIKI_DIRECTORY_BY_NOTE_TYPE.items()
+}
+
 RAW_DIRECTORY_BY_KIND = {
     RAW_KIND_PAPER: "papers",
     RAW_KIND_CLIP: "clips",

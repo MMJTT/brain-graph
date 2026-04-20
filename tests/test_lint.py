@@ -73,6 +73,20 @@ def test_duplicate_ids_are_reported(tmp_path):
     assert any("duplicate id" in issue for issue in issues)
 
 
+def test_duplicate_titles_are_reported(tmp_path):
+    _copy_fixture(tmp_path, "wiki/papers/MemoryGraft.md")
+    _copy_fixture(tmp_path, "wiki/gaps/Provenance Gap.md")
+    _rewrite_fixture(
+        tmp_path,
+        "wiki/gaps/Provenance Gap.md",
+        mutate_frontmatter=lambda frontmatter: frontmatter.__setitem__("title", "MemoryGraft"),
+    )
+
+    issues = collect_issues(tmp_path)
+
+    assert any("duplicate title: MemoryGraft" in issue for issue in issues)
+
+
 def test_invalid_node_type_is_reported(tmp_path):
     _copy_fixture(tmp_path, "wiki/papers/MemoryGraft.md")
     _rewrite_fixture(
@@ -84,6 +98,20 @@ def test_invalid_node_type_is_reported(tmp_path):
     issues = collect_issues(tmp_path)
 
     assert any("invalid node_type: unknown" in issue for issue in issues)
+
+
+def test_folder_node_type_mismatch_is_reported(tmp_path):
+    _copy_fixture(tmp_path, "wiki/papers/MemoryGraft.md")
+    concept_path = tmp_path / "wiki" / "concepts" / "MemoryGraft.md"
+    concept_path.parent.mkdir(parents=True, exist_ok=True)
+    concept_path.write_text(
+        (tmp_path / "wiki" / "papers" / "MemoryGraft.md").read_text(encoding="utf-8"),
+        encoding="utf-8",
+    )
+
+    issues = collect_issues(tmp_path)
+
+    assert any("expected wiki/papers" in issue for issue in issues)
 
 
 def test_broken_wikilink_is_reported(tmp_path):

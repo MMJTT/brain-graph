@@ -30,6 +30,22 @@ def test_ingest_raw_entry_creates_timestamped_raw_paper(tmp_path):
     assert body.startswith("\n# MemoryGraft\n")
 
 
+def test_ingest_raw_entry_handles_missing_source_url(tmp_path):
+    command = IngestRawCommand(
+        kind="paper",
+        slug="offline-note",
+        title="Offline Note",
+        source_url=None,
+    )
+
+    target = ingest_raw_entry(tmp_path, command, "2026-04-19")
+
+    parsed, body = load_frontmatter(target.read_text(encoding="utf-8"))
+    assert "source_url" not in parsed
+    assert body.startswith("\n# Offline Note\n")
+    assert "Source:" not in body
+
+
 def test_ingest_raw_entry_is_append_only(tmp_path):
     command = IngestRawCommand(
         kind="paper",
@@ -56,6 +72,36 @@ def test_ingest_raw_cli_requires_required_arguments(tmp_path, monkeypatch, capsy
     captured = capsys.readouterr()
     assert excinfo.value.code == 2
     assert "the following arguments are required" in captured.err
+
+
+def test_ingest_raw_cli_allows_missing_source_url(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+
+    class FrozenDate(cli_module.date):
+        @classmethod
+        def today(cls):
+            return cls(2026, 4, 19)
+
+    monkeypatch.setattr(cli_module, "date", FrozenDate)
+
+    exit_code = main(
+        [
+            "ingest-raw",
+            "--kind",
+            "paper",
+            "--slug",
+            "offline-note",
+            "--title",
+            "Offline Note",
+        ]
+    )
+
+    assert exit_code == 0
+    target = tmp_path / "raw" / "papers" / "2026-04-19-offline-note.md"
+    parsed, body = load_frontmatter(target.read_text(encoding="utf-8"))
+    assert "source_url" not in parsed
+    assert body.startswith("\n# Offline Note\n")
+    assert "Source:" not in body
 
 
 def test_ingest_raw_cli_creates_file_and_preserves_summary(tmp_path, monkeypatch):

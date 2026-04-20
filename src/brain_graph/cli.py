@@ -24,7 +24,7 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_raw.add_argument("--kind", required=True, choices=RAW_KINDS)
     ingest_raw.add_argument("--slug", required=True)
     ingest_raw.add_argument("--title", required=True)
-    ingest_raw.add_argument("--source-url", required=True)
+    ingest_raw.add_argument("--source-url")
     ingest_raw.add_argument("--summary")
     subparsers.add_parser("lint", help="Lint the graph.")
     subparsers.add_parser("export-graph", help="Export the graph.")

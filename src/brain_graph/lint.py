@@ -6,7 +6,11 @@ import re
 from pathlib import Path
 
 from brain_graph.frontmatter import load_frontmatter
-from brain_graph.models import NOTE_TYPES
+from brain_graph.models import (
+    NOTE_TYPES,
+    NOTE_TYPE_BY_WIKI_DIRECTORY,
+    WIKI_DIRECTORY_BY_NOTE_TYPE,
+)
 
 REQUIRED_FIELDS = (
     "id",
@@ -39,6 +43,7 @@ def collect_issues(project_root: Path) -> list[str]:
     notes: list[tuple[Path, dict[str, object], str]] = []
     titles: set[str] = set()
     ids: set[str] = set()
+    duplicate_titles: set[str] = set()
     duplicate_ids: set[str] = set()
 
     for path in note_paths:
@@ -47,6 +52,8 @@ def collect_issues(project_root: Path) -> list[str]:
 
         title = data.get("title")
         if isinstance(title, str):
+            if title in titles:
+                duplicate_titles.add(title)
             titles.add(title)
 
         note_id = data.get("id")
@@ -57,7 +64,9 @@ def collect_issues(project_root: Path) -> list[str]:
 
     issues: list[str] = []
     for path, data, body in notes:
-        issues.extend(_collect_note_issues(path, data, body, titles, ids, duplicate_ids))
+        issues.extend(
+            _collect_note_issues(path, data, body, titles, ids, duplicate_titles, duplicate_ids)
+        )
 
     return issues
 
@@ -68,6 +77,7 @@ def _collect_note_issues(
     body: str,
     titles: set[str],
     ids: set[str],
+    duplicate_titles: set[str],
     duplicate_ids: set[str],
 ) -> list[str]:
     issues: list[str] = []
@@ -80,10 +90,28 @@ def _collect_note_issues(
     node_type = data.get("node_type")
     if node_type is not None and node_type not in NOTE_TYPES:
         issues.append(f"{location}: invalid node_type: {node_type}")
+    elif isinstance(node_type, str):
+        expected_directory = WIKI_DIRECTORY_BY_NOTE_TYPE[node_type]
+        actual_directory = path.parent.name
+        if actual_directory != expected_directory:
+            issues.append(
+                f"{location}: folder mismatch for node_type {node_type}: "
+                f"expected wiki/{expected_directory}, found wiki/{actual_directory}"
+            )
+
+    expected_node_type = NOTE_TYPE_BY_WIKI_DIRECTORY.get(path.parent.name)
+    if expected_node_type is not None and node_type not in (None, expected_node_type):
+        issues.append(
+            f"{location}: node_type {node_type} does not match folder wiki/{path.parent.name}"
+        )
 
     note_id = data.get("id")
     if isinstance(note_id, str) and note_id in duplicate_ids:
         issues.append(f"{location}: duplicate id: {note_id}")
+
+    title = data.get("title")
+    if isinstance(title, str) and title in duplicate_titles:
+        issues.append(f"{location}: duplicate title: {title}")
 
     for match in WIKILINK_RE.finditer(body):
         target = _normalize_reference(match.group(1))

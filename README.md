@@ -5,7 +5,7 @@ Brain Graph V1.
 ## CLI
 
 - `python -m brain_graph.cli new-note --type paper --title "MemoryGraft" --id paper-memorygraft`
-- `python -m brain_graph.cli ingest-raw --kind paper --slug memorygraft --title "MemoryGraft" --source-url ...`
+- `python -m brain_graph.cli ingest-raw --kind paper --slug memorygraft --title "MemoryGraft" [--source-url ...]`
 - `python -m brain_graph.cli lint`
 - `python -m brain_graph.cli export-graph`
 

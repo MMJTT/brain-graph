@@ -14,7 +14,7 @@ class IngestRawCommand:
     kind: str
     slug: str
     title: str
-    source_url: str
+    source_url: str | None
     summary: str | None = None
 
 
@@ -32,8 +32,10 @@ def ingest_raw_entry(
         "kind": command.kind,
         "slug": command.slug,
         "title": command.title,
-        "source_url": command.source_url,
     }
+    source_url = command.source_url.strip() if command.source_url else None
+    if source_url:
+        frontmatter["source_url"] = source_url
     if command.summary is not None:
         frontmatter["summary"] = command.summary
 
@@ -44,7 +46,9 @@ def ingest_raw_entry(
     ]
     if command.summary:
         body_lines.extend(["", command.summary])
-    body_lines.extend(["", f"Source: {command.source_url}", ""])
+    if source_url:
+        body_lines.extend(["", f"Source: {source_url}"])
+    body_lines.append("")
 
     target.write_text("\n".join(body_lines), encoding="utf-8")
     return target
