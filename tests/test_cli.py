@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from brain_graph.cli import build_parser, main
+from brain_graph.extract_pdf import ExtractedPaper
 from brain_graph.frontmatter import dump_frontmatter, load_frontmatter
 
 
@@ -271,6 +272,7 @@ def test_starter_vault_structure_exists():
         "wiki/authors/.gitkeep",
         "wiki/maps/.gitkeep",
         "views/canvas/starter.canvas",
+        "views/dataview/compilation-queue.md",
         "views/dataview/wiki-index.md",
         "views/graph/README.md",
         "shared/research.md",
@@ -278,3 +280,30 @@ def test_starter_vault_structure_exists():
 
     for relative_path in expected_paths:
         assert (root / relative_path).exists(), relative_path
+
+
+def test_cli_import_compile_and_export_pipeline(tmp_path, monkeypatch, capsys):
+    source_pdf = tmp_path / "MemoryGraft.pdf"
+    source_pdf.write_bytes(b"%PDF-1.4 fake pdf bytes")
+    monkeypatch.setattr(
+        "brain_graph.import_paper.extract_pdf_text",
+        lambda path: ExtractedPaper(
+            title="MemoryGraft",
+            authors=["Alice"],
+            abstract="Prompt injection benchmark abstract.",
+            full_text="MemoryGraft\nAlice\nAbstract\nPrompt injection benchmark abstract.",
+            extractor="pdftotext",
+        ),
+    )
+    monkeypatch.chdir(tmp_path)
+
+    assert main(["import-paper", "--pdf", str(source_pdf)]) == 0
+    assert main(["compile-paper", "--slug", "memorygraft"]) == 0
+    assert main(["export-graph"]) == 0
+
+    captured = capsys.readouterr()
+    assert str(tmp_path / "raw" / "papers" / "2026-04-20-memorygraft.md") in captured.out
+    assert str(tmp_path / "wiki" / "papers" / "MemoryGraft.md") in captured.out
+    assert str(tmp_path / "views" / "canvas" / "starter.canvas") in captured.out
+    assert (tmp_path / "views" / "canvas" / "starter.canvas").exists()
+    assert captured.err == ""

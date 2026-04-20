@@ -136,7 +136,7 @@ def _handle_compile_paper(args: argparse.Namespace) -> int:
     except (FileNotFoundError, ValueError) as exc:
         print(exc, file=sys.stderr)
         return 1
-    print(payload["paper"]["title"])
+    print(Path.cwd() / "wiki" / "papers" / f"{payload['paper']['title']}.md")
     return 0
 
 
