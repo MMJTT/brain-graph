@@ -27,6 +27,7 @@ REQUIRED_FIELDS = (
 NON_REFERENCE_LIST_FIELDS = {
     "aliases",
     "authors",
+    "raw_refs",
     "limitations",
     "potential_directions",
     "questions",

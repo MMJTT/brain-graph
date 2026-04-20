@@ -147,23 +147,6 @@ def test_compile_status_constants_are_stable():
     assert models.COMPILE_STATUS_FAILED == "failed"
 
 
-@pytest.mark.parametrize(
-    ("argv", "expected_error"),
-    [
-        (["compile-batch"], "NotImplementedError"),
-    ],
-)
-def test_cli_p0_commands_report_not_implemented(argv, monkeypatch, capsys, expected_error):
-    monkeypatch.chdir(Path.cwd())
-
-    exit_code = main(argv)
-
-    captured = capsys.readouterr()
-    assert exit_code == 1
-    assert expected_error in captured.err
-    assert captured.out == ""
-
-
 def test_cli_lint_reports_ok_for_clean_workspace(tmp_path, monkeypatch, capsys):
     _seed_clean_wiki(tmp_path)
     monkeypatch.chdir(tmp_path)
