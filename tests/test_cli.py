@@ -150,7 +150,6 @@ def test_compile_status_constants_are_stable():
 @pytest.mark.parametrize(
     ("argv", "expected_error"),
     [
-        (["import-paper", "--pdf", "/tmp/memorygraft.pdf"], "NotImplementedError"),
         (["compile-paper", "--slug", "memorygraft"], "NotImplementedError"),
         (["compile-batch"], "NotImplementedError"),
     ],

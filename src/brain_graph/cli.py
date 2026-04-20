@@ -3,6 +3,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
+from brain_graph.import_paper import ImportPaperCommand, import_paper_source
 from brain_graph.ingest_raw import IngestRawCommand, ingest_raw_entry
 from brain_graph.export_graph import export_graph_files
 from brain_graph.lint import collect_issues
@@ -110,9 +111,21 @@ def _handle_export_graph() -> int:
     return 0
 
 
-def _handle_import_paper() -> int:
-    print("NotImplementedError: import-paper is not implemented yet", file=sys.stderr)
-    return 1
+def _handle_import_paper(args: argparse.Namespace) -> int:
+    command = ImportPaperCommand(
+        pdf_path=args.pdf,
+        url=args.url,
+        title=args.title,
+        slug=args.slug,
+    )
+    try:
+        raw_path, metadata_path = import_paper_source(Path.cwd(), command, date.today().isoformat())
+    except (FileExistsError, ValueError) as exc:
+        print(exc, file=sys.stderr)
+        return 1
+    print(raw_path)
+    print(metadata_path)
+    return 0
 
 
 def _handle_compile_paper() -> int:
@@ -134,7 +147,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "ingest-raw":
         return _handle_ingest_raw(args)
     if args.command == "import-paper":
-        return _handle_import_paper()
+        return _handle_import_paper(args)
     if args.command == "compile-paper":
         return _handle_compile_paper()
     if args.command == "compile-batch":
