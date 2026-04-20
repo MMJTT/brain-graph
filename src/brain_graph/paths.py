@@ -21,3 +21,7 @@ def raw_asset_path_for_paper(project_root, slug: str, suffix: str) -> Path:
 
 def raw_metadata_path_for_paper(project_root, slug: str) -> Path:
     return Path(project_root) / "raw" / "metadata" / "papers" / f"{slug}.json"
+
+
+def raw_text_path_for_paper(project_root, slug: str) -> Path:
+    return Path(project_root) / "raw" / "metadata" / "papers" / f"{slug}.txt"

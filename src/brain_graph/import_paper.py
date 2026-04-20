@@ -7,12 +7,14 @@ import shutil
 from dataclasses import dataclass
 from pathlib import Path
 
+from brain_graph.extract_pdf import extract_pdf_text
 from brain_graph.frontmatter import dump_frontmatter
 from brain_graph.models import COMPILE_STATUS_IMPORTED
 from brain_graph.paths import (
     raw_asset_path_for_paper,
     raw_metadata_path_for_paper,
     raw_path_for_kind,
+    raw_text_path_for_paper,
 )
 from brain_graph.slugify import slugify_title
 
@@ -35,10 +37,15 @@ def import_paper_source(
     slug = command.slug or slugify_title(title)
     raw_path = raw_path_for_kind(project_root, "paper", slug, imported_at)
     metadata_path = raw_metadata_path_for_paper(project_root, slug)
+    text_path = raw_text_path_for_paper(project_root, slug)
 
     asset_path: Path | None = None
     source_path: str | None = None
     source_url: str | None = None
+    authors: list[str] = []
+    abstract = ""
+    full_text_path: str | None = None
+    extractor: str | None = None
 
     if command.pdf_path:
         source = Path(command.pdf_path)
@@ -47,7 +54,7 @@ def import_paper_source(
     elif command.url:
         source_url = command.url
 
-    for target in [raw_path, metadata_path, asset_path]:
+    for target in [raw_path, metadata_path, text_path, asset_path]:
         if target is not None and target.exists():
             raise FileExistsError(f"paper import already exists for slug {slug}: {target}")
 
@@ -59,6 +66,13 @@ def import_paper_source(
         asset_path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(command.pdf_path, asset_path)
         asset_value = asset_path.relative_to(project_root).as_posix()
+        extracted = extract_pdf_text(asset_path)
+        authors = extracted.authors
+        abstract = extracted.abstract
+        extractor = extracted.extractor
+        if extracted.full_text:
+            text_path.write_text(extracted.full_text, encoding="utf-8")
+            full_text_path = text_path.relative_to(project_root).as_posix()
 
     metadata_value = metadata_path.relative_to(project_root).as_posix()
     frontmatter = {
@@ -88,11 +102,13 @@ def import_paper_source(
         "source_kind": source_kind,
         "source_path": source_path,
         "source_url": source_url,
-        "authors": [],
-        "abstract": "",
-        "full_text_path": None,
+        "authors": authors,
+        "abstract": abstract,
+        "full_text_path": full_text_path,
         "imported_at": imported_at,
     }
+    if extractor is not None:
+        metadata["extractor"] = extractor
     metadata_path.write_text(json.dumps(metadata, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     return raw_path, metadata_path
 

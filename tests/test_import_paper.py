@@ -3,12 +3,23 @@ from pathlib import Path
 
 import pytest
 
+from brain_graph.extract_pdf import ExtractedPaper
 from brain_graph.import_paper import ImportPaperCommand, import_paper_source
 
 
-def test_import_pdf_creates_raw_note_asset_and_metadata(tmp_path):
+def test_import_pdf_creates_raw_note_asset_and_metadata(tmp_path, monkeypatch):
     source_pdf = tmp_path / "MemoryGraft.pdf"
     source_pdf.write_bytes(b"%PDF-1.4 fake pdf bytes")
+    monkeypatch.setattr(
+        "brain_graph.import_paper.extract_pdf_text",
+        lambda path: ExtractedPaper(
+            title="MemoryGraft",
+            authors=["Alice", "Bob"],
+            abstract="A compact abstract.",
+            full_text="MemoryGraft\nAlice\nBob\nAbstract\nA compact abstract.",
+            extractor="pdftotext",
+        ),
+    )
 
     raw_path, metadata_path = import_paper_source(
         tmp_path,
@@ -41,11 +52,15 @@ def test_import_pdf_creates_raw_note_asset_and_metadata(tmp_path):
         "source_kind": "pdf",
         "source_path": str(source_pdf),
         "source_url": None,
-        "authors": [],
-        "abstract": "",
-        "full_text_path": None,
+        "authors": ["Alice", "Bob"],
+        "abstract": "A compact abstract.",
+        "full_text_path": "raw/metadata/papers/memorygraft.txt",
+        "extractor": "pdftotext",
         "imported_at": "2026-04-20",
     }
+    assert (
+        tmp_path / "raw" / "metadata" / "papers" / "memorygraft.txt"
+    ).read_text(encoding="utf-8") == "MemoryGraft\nAlice\nBob\nAbstract\nA compact abstract."
 
 
 def test_import_url_creates_raw_note_and_metadata(tmp_path):
@@ -85,9 +100,19 @@ def test_import_url_creates_raw_note_and_metadata(tmp_path):
     }
 
 
-def test_import_duplicate_slug_fails_without_overwriting(tmp_path):
+def test_import_duplicate_slug_fails_without_overwriting(tmp_path, monkeypatch):
     source_pdf = tmp_path / "MemoryGraft.pdf"
     source_pdf.write_bytes(b"%PDF-1.4 fake pdf bytes")
+    monkeypatch.setattr(
+        "brain_graph.import_paper.extract_pdf_text",
+        lambda path: ExtractedPaper(
+            title="MemoryGraft",
+            authors=[],
+            abstract="",
+            full_text="",
+            extractor="empty",
+        ),
+    )
 
     import_paper_source(
         tmp_path,
