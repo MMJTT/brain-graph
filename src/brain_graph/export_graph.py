@@ -53,12 +53,15 @@ def export_graph_files(project_root: Path) -> tuple[Path, Path]:
     exports_dir.mkdir(parents=True, exist_ok=True)
     json_path = exports_dir / "brain_graph.json"
     mermaid_path = exports_dir / "brain_graph.mmd"
+    canvas_path = root / "views" / "canvas" / "starter.canvas"
 
     json_path.write_text(
         json.dumps({"nodes": nodes, "edges": edges}, indent=2, ensure_ascii=True) + "\n",
         encoding="utf-8",
     )
     mermaid_path.write_text(_render_mermaid(notes, edges), encoding="utf-8")
+    canvas_path.parent.mkdir(parents=True, exist_ok=True)
+    canvas_path.write_text(_render_canvas(root, notes, edges), encoding="utf-8")
 
     return json_path, mermaid_path
 
@@ -66,7 +69,10 @@ def export_graph_files(project_root: Path) -> tuple[Path, Path]:
 def _load_notes(root: Path) -> list[Note]:
     notes: list[Note] = []
     for path in sorted(root.glob("wiki/*/*.md")):
-        data, body = load_frontmatter(path.read_text(encoding="utf-8"))
+        text = path.read_text(encoding="utf-8")
+        if not text.strip():
+            continue
+        data, body = load_frontmatter(text)
         note_id = data.get("id")
         title = data.get("title")
         node_type = data.get("node_type")
@@ -148,6 +154,54 @@ def _render_mermaid(notes: list[Note], edges: list[dict[str, str]]) -> str:
             continue
         lines.append(f"    {source} -->|{edge['type']}| {target}")
     return "\n".join(lines) + "\n"
+
+
+def _render_canvas(
+    root: Path,
+    notes: list[Note],
+    edges: list[dict[str, str]],
+) -> str:
+    node_width = 360
+    node_height = 220
+    x_gap = 420
+    y_gap = 260
+
+    column_by_type: dict[str, int] = {}
+    row_by_type: dict[str, int] = {}
+    canvas_nodes: list[dict[str, object]] = []
+
+    for note in notes:
+        column = column_by_type.setdefault(note.node_type, len(column_by_type))
+        row = row_by_type.get(note.node_type, 0)
+        row_by_type[note.node_type] = row + 1
+        canvas_nodes.append(
+            {
+                "id": note.id,
+                "type": "file",
+                "file": note.path.relative_to(root).as_posix(),
+                "x": column * x_gap,
+                "y": row * y_gap,
+                "width": node_width,
+                "height": node_height,
+            }
+        )
+
+    canvas_edges = [
+        {
+            "id": f"edge-{index}",
+            "fromNode": edge["source"],
+            "fromSide": "right",
+            "toNode": edge["target"],
+            "toSide": "left",
+            "label": edge["type"],
+        }
+        for index, edge in enumerate(edges)
+    ]
+
+    return (
+        json.dumps({"nodes": canvas_nodes, "edges": canvas_edges}, indent=2, ensure_ascii=True)
+        + "\n"
+    )
 
 
 def _append_edge(

@@ -70,6 +70,22 @@ questions:
 ## Focus
 This map is the first connected view built from the local PDF corpus in `agent-papers`.
 
+## Visual Entry
+- Open [Starter Canvas](../../views/canvas/starter.canvas) for a ready-made Obsidian Canvas view.
+- Use Obsidian's left sidebar graph icon for the vault-wide graph view.
+
+```mermaid
+graph LR
+    corpus["Agent Security Seed Corpus"] --> attacks["Attack Paper Map"]
+    corpus --> defenses["Defense Paper Map"]
+    corpus --> benchmarks["Benchmark Paper Map"]
+    corpus --> systems["System Paper Map"]
+    attacks --> prompt["Prompt Injection"]
+    defenses --> hardening["Agent Defenses"]
+    benchmarks --> evals["Agent Benchmarks"]
+    systems --> cua["Computer-Use Agents"]
+```
+
 ## Topic Maps
 - [[Attack Paper Map]]
 - [[Defense Paper Map]]

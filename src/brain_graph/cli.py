@@ -86,8 +86,10 @@ def _handle_export_graph() -> int:
     except ValueError as exc:
         print(exc, file=sys.stderr)
         return 1
+    canvas_path = Path.cwd() / "views" / "canvas" / "starter.canvas"
     print(json_path)
     print(mermaid_path)
+    print(canvas_path)
     return 0
 
 

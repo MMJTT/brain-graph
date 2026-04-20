@@ -1,1 +1,4615 @@
-{"nodes":[{"id":"starter-text","type":"text","text":"Start here","x":0,"y":0,"width":240,"height":120}],"edges":[]}
+{
+  "nodes": [
+    {
+      "id": "concept-agent-benchmarks",
+      "type": "file",
+      "file": "wiki/concepts/Agent Benchmarks.md",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-agent-defenses",
+      "type": "file",
+      "file": "wiki/concepts/Agent Defenses.md",
+      "x": 0,
+      "y": 260,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-computer-use-agents",
+      "type": "file",
+      "file": "wiki/concepts/Computer-Use Agents.md",
+      "x": 0,
+      "y": 520,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-cross-modal-injection",
+      "type": "file",
+      "file": "wiki/concepts/Cross-Modal Injection.md",
+      "x": 0,
+      "y": 780,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-dos-attacks",
+      "type": "file",
+      "file": "wiki/concepts/DoS Attacks.md",
+      "x": 0,
+      "y": 1040,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-environmental-injection",
+      "type": "file",
+      "file": "wiki/concepts/Environmental Injection.md",
+      "x": 0,
+      "y": 1300,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-gui-agents",
+      "type": "file",
+      "file": "wiki/concepts/GUI Agents.md",
+      "x": 0,
+      "y": 1560,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-jailbreak-attacks",
+      "type": "file",
+      "file": "wiki/concepts/Jailbreak Attacks.md",
+      "x": 0,
+      "y": 1820,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-memory-poisoning",
+      "type": "file",
+      "file": "wiki/concepts/Memory Poisoning.md",
+      "x": 0,
+      "y": 2080,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-multi-agent-systems",
+      "type": "file",
+      "file": "wiki/concepts/Multi-Agent Systems.md",
+      "x": 0,
+      "y": 2340,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-multimodal-agents",
+      "type": "file",
+      "file": "wiki/concepts/Multimodal Agents.md",
+      "x": 0,
+      "y": 2600,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-prompt-injection",
+      "type": "file",
+      "file": "wiki/concepts/Prompt Injection.md",
+      "x": 0,
+      "y": 2860,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-red-teaming",
+      "type": "file",
+      "file": "wiki/concepts/Red Teaming.md",
+      "x": 0,
+      "y": 3120,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "concept-web-agents",
+      "type": "file",
+      "file": "wiki/concepts/Web Agents.md",
+      "x": 0,
+      "y": 3380,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "map-agent-security-seed-corpus",
+      "type": "file",
+      "file": "wiki/maps/Agent Security Seed Corpus.md",
+      "x": 420,
+      "y": 0,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "map-attack-paper-map",
+      "type": "file",
+      "file": "wiki/maps/Attack Paper Map.md",
+      "x": 420,
+      "y": 260,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "map-benchmark-paper-map",
+      "type": "file",
+      "file": "wiki/maps/Benchmark Paper Map.md",
+      "x": 420,
+      "y": 520,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "map-defense-paper-map",
+      "type": "file",
+      "file": "wiki/maps/Defense Paper Map.md",
+      "x": 420,
+      "y": 780,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "map-system-paper-map",
+      "type": "file",
+      "file": "wiki/maps/System Paper Map.md",
+      "x": 420,
+      "y": 1040,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-agent-poison",
+      "type": "file",
+      "file": "wiki/papers/AGENT POISON: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases.md",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-auto-dan",
+      "type": "file",
+      "file": "wiki/papers/AUTO DAN: Generating Stealthy Jailbreak Prompts on Aligned Large Language Models.md",
+      "x": 840,
+      "y": 260,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-agentdojo",
+      "type": "file",
+      "file": "wiki/papers/AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents.md",
+      "x": 840,
+      "y": 520,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-agentsys",
+      "type": "file",
+      "file": "wiki/papers/AgentSys: Secure and Dynamic LLM Agents Through Explicit Hierarchical Memory Management.md",
+      "x": 840,
+      "y": 780,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-autodefense",
+      "type": "file",
+      "file": "wiki/papers/AutoDefense: Multi-Agent LLM Defense against Jailbreak Attacks.md",
+      "x": 840,
+      "y": 1040,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-breaking-agents",
+      "type": "file",
+      "file": "wiki/papers/Breaking Agents: Compromising Autonomous LLM Agents Through Malfunction Amplification.md",
+      "x": 840,
+      "y": 1300,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-caution-for-the-environment",
+      "type": "file",
+      "file": "wiki/papers/Caution for the Environment: Multimodal LLM Agents are Susceptible to Environmental Distractions.md",
+      "x": 840,
+      "y": 1560,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-pdos",
+      "type": "file",
+      "file": "wiki/papers/Denial-of-Service Poisoning Attacks on Large Language Models.md",
+      "x": 840,
+      "y": 1820,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-eva",
+      "type": "file",
+      "file": "wiki/papers/EVA: Red-Teaming GUI Agents via Evolving Indirect Prompt Injection.md",
+      "x": 840,
+      "y": 2080,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-aeia-mn",
+      "type": "file",
+      "file": "wiki/papers/Evaluating the Robustness of Multimodal Agents Against Active Environmental Injection Attacks.md",
+      "x": 840,
+      "y": 2340,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-hijacking-jarvis",
+      "type": "file",
+      "file": "wiki/papers/Hijacking JARVIS: Benchmarking Mobile GUI Agents against Unprivileged Third Parties.md",
+      "x": 840,
+      "y": 2600,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-crossinject",
+      "type": "file",
+      "file": "wiki/papers/Manipulating Multimodal Agents via Cross-Modal Prompt Injection.md",
+      "x": 840,
+      "y": 2860,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-not-what-youve-signed-up-for",
+      "type": "file",
+      "file": "wiki/papers/Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection.md",
+      "x": 840,
+      "y": 3120,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-osworld",
+      "type": "file",
+      "file": "wiki/papers/OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments.md",
+      "x": 840,
+      "y": 3380,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-red-teaming-multi-agent-systems",
+      "type": "file",
+      "file": "wiki/papers/Red-Teaming LLM Multi-Agent Systems via Communication Attacks.md",
+      "x": 840,
+      "y": 3640,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-redteamcua",
+      "type": "file",
+      "file": "wiki/papers/RedTeamCUA: Realistic Adversarial Testing of Computer-Use Agents in Hybrid Web-OS Environments.md",
+      "x": 840,
+      "y": 3900,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-fine-print-injection",
+      "type": "file",
+      "file": "wiki/papers/The Obvious Invisible Threat: LLM-Powered GUI Agents' Vulnerability to Fine-Print Injections.md",
+      "x": 840,
+      "y": 4160,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-thinktrap",
+      "type": "file",
+      "file": "wiki/papers/ThinkTrap: Denial-of-Service Attacks against Black-box LLM Services via Infinite Thinking.md",
+      "x": 840,
+      "y": 4420,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-udora",
+      "type": "file",
+      "file": "wiki/papers/UDora: A Unified Red Teaming Framework against LLM Agents by Dynamically Hijacking Their Own Reasoning.md",
+      "x": 840,
+      "y": 4680,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-visualwebarena",
+      "type": "file",
+      "file": "wiki/papers/VisualWebArena: Evaluating Multimodal Agents on Realistic Visually Grounded Web Tasks.md",
+      "x": 840,
+      "y": 4940,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-webarena",
+      "type": "file",
+      "file": "wiki/papers/WebArena: A Realistic Web Environment for Building Autonomous Agents.md",
+      "x": 840,
+      "y": 5200,
+      "width": 360,
+      "height": 220
+    },
+    {
+      "id": "paper-webinject",
+      "type": "file",
+      "file": "wiki/papers/WebInject: Prompt Injection Attack to Web Agents.md",
+      "x": 840,
+      "y": 5460,
+      "width": 360,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-0",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-1",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-2",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-3",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-4",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-5",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-6",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-7",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-8",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-9",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-10",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-11",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-12",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-13",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-14",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-15",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-16",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-17",
+      "fromNode": "concept-agent-benchmarks",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-18",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-19",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-20",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-21",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-22",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-23",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-24",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-25",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-26",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-27",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-28",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-29",
+      "fromNode": "concept-agent-defenses",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-30",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-31",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-32",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-33",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-34",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-35",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-36",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-37",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-38",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-39",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-40",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-41",
+      "fromNode": "concept-computer-use-agents",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-42",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-43",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-44",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-45",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-46",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-47",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-48",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-49",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-50",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-51",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-52",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-53",
+      "fromNode": "concept-cross-modal-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-54",
+      "fromNode": "concept-dos-attacks",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-55",
+      "fromNode": "concept-dos-attacks",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-56",
+      "fromNode": "concept-dos-attacks",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-57",
+      "fromNode": "concept-dos-attacks",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-58",
+      "fromNode": "concept-dos-attacks",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-59",
+      "fromNode": "concept-dos-attacks",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-60",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-61",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-62",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-63",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-64",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-65",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-66",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-67",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-68",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-69",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-70",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-71",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-72",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-73",
+      "fromNode": "concept-environmental-injection",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-74",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-75",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-76",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-77",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-78",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-79",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-80",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-81",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-82",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-83",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-84",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-85",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-86",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-87",
+      "fromNode": "concept-gui-agents",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-88",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-89",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-90",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-91",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-92",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-93",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-94",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-95",
+      "fromNode": "concept-jailbreak-attacks",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-96",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-97",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-98",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-99",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-100",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-101",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-102",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-103",
+      "fromNode": "concept-memory-poisoning",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-104",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-105",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-106",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-107",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-108",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-109",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-110",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-111",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-112",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-113",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-114",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-115",
+      "fromNode": "concept-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-116",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-117",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-118",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-119",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-120",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-121",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-122",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-123",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-124",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-125",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-126",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-127",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-128",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-129",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-130",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-131",
+      "fromNode": "concept-multimodal-agents",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-132",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-133",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-134",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-135",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-136",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-137",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-138",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-139",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-140",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-141",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-142",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-143",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-144",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-145",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-146",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-147",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-148",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-149",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-150",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-151",
+      "fromNode": "concept-prompt-injection",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-152",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-153",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-154",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-155",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-156",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-157",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-158",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-159",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-160",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-161",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-162",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-163",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-164",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-165",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-166",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-167",
+      "fromNode": "concept-red-teaming",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-168",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-169",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-170",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-171",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "supports"
+    },
+    {
+      "id": "edge-172",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-173",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-174",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-175",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-176",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-177",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-178",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-179",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-180",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-181",
+      "fromNode": "concept-web-agents",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-182",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-183",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-184",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-185",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-attack-paper-map",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-186",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-defense-paper-map",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-187",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-benchmark-paper-map",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-188",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-system-paper-map",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-189",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-attack-paper-map",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-190",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-defense-paper-map",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-191",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-benchmark-paper-map",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-192",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "map-system-paper-map",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-193",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-194",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-195",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-196",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-197",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-198",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-199",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-200",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-201",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-202",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-203",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-204",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-205",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-206",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-207",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-208",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-209",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-210",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-211",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-212",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-213",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-214",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-215",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-216",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-217",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-218",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-219",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-220",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-221",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-222",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-223",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-224",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-225",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-226",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-227",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-228",
+      "fromNode": "map-agent-security-seed-corpus",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-229",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-230",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-231",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-232",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-233",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-234",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-235",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-236",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-237",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-238",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-239",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-240",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-241",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-242",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-243",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-244",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-245",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-246",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-247",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-248",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-249",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-250",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-251",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-252",
+      "fromNode": "map-attack-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-253",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-254",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-255",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-256",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-257",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-258",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-259",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-260",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-261",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-262",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-263",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-264",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-265",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-266",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-267",
+      "fromNode": "map-benchmark-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-268",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-269",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-270",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-271",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-272",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-273",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-274",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-275",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-276",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-277",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-278",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-279",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-280",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-281",
+      "fromNode": "map-defense-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-282",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-283",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-284",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-285",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-286",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-287",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-288",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-289",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-290",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-291",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-292",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-293",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-294",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-295",
+      "fromNode": "map-system-paper-map",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-296",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-297",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-298",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-299",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-300",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-301",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-302",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-303",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-304",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-305",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-306",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-307",
+      "fromNode": "paper-agent-poison",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-308",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-309",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-310",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-311",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-312",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-313",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-314",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-315",
+      "fromNode": "paper-auto-dan",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-316",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-317",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-318",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-319",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-320",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-321",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-322",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-323",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-324",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-325",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-326",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-327",
+      "fromNode": "paper-agentdojo",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-328",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-329",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-330",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-331",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-332",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-333",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-334",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-335",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-336",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-337",
+      "fromNode": "paper-agentsys",
+      "fromSide": "right",
+      "toNode": "concept-memory-poisoning",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-338",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-339",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-340",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-341",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-342",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-343",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-344",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-345",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-346",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-347",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-348",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "concept-jailbreak-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-349",
+      "fromNode": "paper-autodefense",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-350",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-351",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-352",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-353",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-354",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-355",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "paper-agentsys",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-356",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "paper-agent-poison",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-357",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-358",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-359",
+      "fromNode": "paper-breaking-agents",
+      "fromSide": "right",
+      "toNode": "concept-agent-defenses",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-360",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-361",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-362",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-363",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-364",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-365",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-366",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-367",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-368",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-369",
+      "fromNode": "paper-caution-for-the-environment",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-370",
+      "fromNode": "paper-pdos",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-371",
+      "fromNode": "paper-pdos",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-372",
+      "fromNode": "paper-pdos",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-373",
+      "fromNode": "paper-pdos",
+      "fromSide": "right",
+      "toNode": "paper-thinktrap",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-374",
+      "fromNode": "paper-pdos",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-375",
+      "fromNode": "paper-pdos",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-376",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-377",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-378",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-379",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-380",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-381",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-382",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-383",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-384",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-385",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-386",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-387",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-388",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-389",
+      "fromNode": "paper-eva",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-390",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-391",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-392",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-393",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-394",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-395",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-396",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "paper-caution-for-the-environment",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-397",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-398",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-399",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-400",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-401",
+      "fromNode": "paper-aeia-mn",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-402",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-403",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-404",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-405",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-406",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-407",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-408",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-409",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-410",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-411",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-412",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-413",
+      "fromNode": "paper-hijacking-jarvis",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-414",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-415",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-416",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-417",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-418",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-419",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-420",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-421",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "paper-fine-print-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-422",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "paper-aeia-mn",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-423",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-424",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "concept-cross-modal-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-425",
+      "fromNode": "paper-crossinject",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-426",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-427",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-428",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-429",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-430",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-431",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "paper-webinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-432",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-433",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "paper-breaking-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-434",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-435",
+      "fromNode": "paper-not-what-youve-signed-up-for",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-436",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-437",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-438",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-439",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-440",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-441",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-442",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-443",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-444",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-445",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-446",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-447",
+      "fromNode": "paper-osworld",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-448",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-449",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-450",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-451",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-452",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-453",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-udora",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-454",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-455",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-456",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-457",
+      "fromNode": "paper-red-teaming-multi-agent-systems",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-458",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-459",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-460",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-461",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-462",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-463",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-464",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-465",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-466",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-467",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-468",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-computer-use-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-469",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-470",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-471",
+      "fromNode": "paper-redteamcua",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-472",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-473",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-474",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-475",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-476",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-477",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-478",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "paper-eva",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-479",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "paper-crossinject",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-480",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "paper-hijacking-jarvis",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-481",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-482",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "concept-environmental-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-483",
+      "fromNode": "paper-fine-print-injection",
+      "fromSide": "right",
+      "toNode": "concept-gui-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-484",
+      "fromNode": "paper-thinktrap",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-485",
+      "fromNode": "paper-thinktrap",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-486",
+      "fromNode": "paper-thinktrap",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-487",
+      "fromNode": "paper-thinktrap",
+      "fromSide": "right",
+      "toNode": "paper-pdos",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-488",
+      "fromNode": "paper-thinktrap",
+      "fromSide": "right",
+      "toNode": "paper-auto-dan",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-489",
+      "fromNode": "paper-thinktrap",
+      "fromSide": "right",
+      "toNode": "concept-dos-attacks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-490",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-491",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-492",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-493",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-494",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-495",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "paper-red-teaming-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-496",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-497",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "paper-autodefense",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-498",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "concept-red-teaming",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-499",
+      "fromNode": "paper-udora",
+      "fromSide": "right",
+      "toNode": "concept-multi-agent-systems",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-500",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-501",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-502",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-503",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-504",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-505",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-506",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "paper-webarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-507",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-508",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "paper-redteamcua",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-509",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-510",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "concept-multimodal-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-511",
+      "fromNode": "paper-visualwebarena",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-512",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-513",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-514",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-515",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-516",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-517",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "paper-osworld",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-518",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-519",
+      "fromNode": "paper-webarena",
+      "fromSide": "right",
+      "toNode": "concept-agent-benchmarks",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-520",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-521",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "mentions"
+    },
+    {
+      "id": "edge-522",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-523",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-524",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "related_to"
+    },
+    {
+      "id": "edge-525",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "paper-not-what-youve-signed-up-for",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-526",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "paper-agentdojo",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-527",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "paper-visualwebarena",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-528",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "concept-prompt-injection",
+      "toSide": "left",
+      "label": "body_link"
+    },
+    {
+      "id": "edge-529",
+      "fromNode": "paper-webinject",
+      "fromSide": "right",
+      "toNode": "concept-web-agents",
+      "toSide": "left",
+      "label": "body_link"
+    }
+  ]
+}

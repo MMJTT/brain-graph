@@ -46,6 +46,15 @@ def test_clean_wiki_has_no_lint_issues(tmp_path):
     assert collect_issues(tmp_path) == []
 
 
+def test_empty_stub_note_is_ignored(tmp_path):
+    _seed_clean_wiki(tmp_path)
+    stub = tmp_path / "wiki" / "maps" / "GUI Agents.md"
+    stub.parent.mkdir(parents=True, exist_ok=True)
+    stub.write_text("", encoding="utf-8")
+
+    assert collect_issues(tmp_path) == []
+
+
 def test_missing_required_field_id_is_reported(tmp_path):
     _copy_fixture(tmp_path, "wiki/papers/MemoryGraft.md")
     _rewrite_fixture(

@@ -47,7 +47,10 @@ def collect_issues(project_root: Path) -> list[str]:
     duplicate_ids: set[str] = set()
 
     for path in note_paths:
-        data, body = load_frontmatter(path.read_text(encoding="utf-8"))
+        text = path.read_text(encoding="utf-8")
+        if not text.strip():
+            continue
+        data, body = load_frontmatter(text)
         notes.append((path, data, body))
 
         title = data.get("title")

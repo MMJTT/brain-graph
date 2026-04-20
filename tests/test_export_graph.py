@@ -60,6 +60,8 @@ def test_export_graph_writes_json_and_mermaid(tmp_path):
     assert mermaid_path == tmp_path / "exports" / "brain_graph.mmd"
     assert json_path.exists()
     assert mermaid_path.exists()
+    canvas_path = tmp_path / "views" / "canvas" / "starter.canvas"
+    assert canvas_path.exists()
 
     graph = json.loads(json_path.read_text(encoding="utf-8"))
     assert graph == {
@@ -91,6 +93,45 @@ def test_export_graph_writes_json_and_mermaid(tmp_path):
         ],
     }
     assert mermaid_path.read_text(encoding="utf-8").startswith("graph LR")
+    canvas = json.loads(canvas_path.read_text(encoding="utf-8"))
+    assert canvas["nodes"] == [
+        {
+            "id": "concept-semantic-imitation",
+            "type": "file",
+            "file": "wiki/concepts/Semantic Imitation.md",
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 220,
+        },
+        {
+            "id": "paper-memorygraft",
+            "type": "file",
+            "file": "wiki/papers/MemoryGraft.md",
+            "x": 420,
+            "y": 0,
+            "width": 360,
+            "height": 220,
+        },
+    ]
+    assert canvas["edges"] == [
+        {
+            "id": "edge-0",
+            "fromNode": "paper-memorygraft",
+            "fromSide": "right",
+            "toNode": "concept-semantic-imitation",
+            "toSide": "left",
+            "label": "mentions",
+        },
+        {
+            "id": "edge-1",
+            "fromNode": "paper-memorygraft",
+            "fromSide": "right",
+            "toNode": "concept-semantic-imitation",
+            "toSide": "left",
+            "label": "body_link",
+        },
+    ]
 
 
 def test_export_graph_cli_prints_output_paths(tmp_path, monkeypatch, capsys):
@@ -103,6 +144,7 @@ def test_export_graph_cli_prints_output_paths(tmp_path, monkeypatch, capsys):
     assert exit_code == 0
     assert str(tmp_path / "exports" / "brain_graph.json") in captured.out
     assert str(tmp_path / "exports" / "brain_graph.mmd") in captured.out
+    assert str(tmp_path / "views" / "canvas" / "starter.canvas") in captured.out
     assert captured.err == ""
 
 
@@ -139,3 +181,15 @@ def test_export_graph_cli_reports_validation_errors(tmp_path, monkeypatch, capsy
     assert exit_code == 1
     assert "duplicate note title" in captured.err
     assert captured.out == ""
+
+
+def test_export_graph_ignores_empty_stub_notes(tmp_path):
+    _seed_graph_notes(tmp_path)
+    stub = tmp_path / "wiki" / "maps" / "GUI Agents.md"
+    stub.parent.mkdir(parents=True, exist_ok=True)
+    stub.write_text("", encoding="utf-8")
+
+    json_path, mermaid_path = export_graph_files(tmp_path)
+
+    assert json_path.exists()
+    assert mermaid_path.exists()
