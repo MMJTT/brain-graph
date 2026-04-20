@@ -1,7 +1,11 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from brain_graph.cli import build_parser, main
+from brain_graph.discover_papers import DiscoveredPaper
+from brain_graph.extract_pdf import ExtractedPaper
 from brain_graph.frontmatter import dump_frontmatter, load_frontmatter
 
 
@@ -89,6 +93,92 @@ def test_cli_parser_wires_expected_subcommands():
     )
     assert parser.parse_args(["lint"]).command == "lint"
     assert parser.parse_args(["export-graph"]).command == "export-graph"
+    assert (
+        parser.parse_args(
+            [
+                "import-paper",
+                "--pdf",
+                "/tmp/memorygraft.pdf",
+            ]
+        ).command
+        == "import-paper"
+    )
+    assert (
+        parser.parse_args(
+            [
+                "compile-paper",
+                "--slug",
+                "memorygraft",
+            ]
+        ).command
+        == "compile-paper"
+    )
+    assert (
+        parser.parse_args(
+            [
+                "compile-batch",
+                "--source",
+                "raw/papers",
+                "--limit",
+                "2",
+            ]
+        ).command
+        == "compile-batch"
+    )
+    assert (
+        parser.parse_args(["import-paper", "--pdf", "/tmp/memorygraft.pdf"]).command
+        == "import-paper"
+    )
+    assert (
+        parser.parse_args(["import-paper", "--url", "https://arxiv.org/abs/2512.16962"]).command
+        == "import-paper"
+    )
+    assert parser.parse_args(["compile-paper", "--slug", "memorygraft"]).command == "compile-paper"
+    assert parser.parse_args(["compile-batch"]).command == "compile-batch"
+    assert (
+        parser.parse_args(["compile-batch", "--source", "raw/papers", "--limit", "20"]).command
+        == "compile-batch"
+    )
+    compile_paper_args = parser.parse_args(
+        ["compile-paper", "--slug", "memorygraft", "--compiler", "openrouter", "--model", "openai/gpt-4.1-mini"]
+    )
+    assert compile_paper_args.command == "compile-paper"
+    assert compile_paper_args.compiler == "openrouter"
+    assert compile_paper_args.model == "openai/gpt-4.1-mini"
+    compile_batch_args = parser.parse_args(
+        ["compile-batch", "--compiler", "heuristic", "--model", "anthropic/claude-3.5-haiku"]
+    )
+    assert compile_batch_args.command == "compile-batch"
+    assert compile_batch_args.compiler == "heuristic"
+    assert compile_batch_args.model == "anthropic/claude-3.5-haiku"
+    discover_args = parser.parse_args(
+        ["discover-papers", "--query", "prompt injection", "--provider", "both", "--limit", "5"]
+    )
+    assert discover_args.command == "discover-papers"
+    assert discover_args.provider == "both"
+    research_args = parser.parse_args(
+        [
+            "research-loop",
+            "--query",
+            "agent security",
+            "--provider",
+            "arxiv",
+            "--limit",
+            "3",
+            "--compiler",
+            "heuristic",
+        ]
+    )
+    assert research_args.command == "research-loop"
+    assert research_args.compiler == "heuristic"
+
+
+def test_compile_status_constants_are_stable():
+    from brain_graph import models
+
+    assert models.COMPILE_STATUS_IMPORTED == "imported"
+    assert models.COMPILE_STATUS_COMPILED == "compiled"
+    assert models.COMPILE_STATUS_FAILED == "failed"
 
 
 def test_cli_lint_reports_ok_for_clean_workspace(tmp_path, monkeypatch, capsys):
@@ -215,6 +305,7 @@ def test_starter_vault_structure_exists():
         "wiki/authors/.gitkeep",
         "wiki/maps/.gitkeep",
         "views/canvas/starter.canvas",
+        "views/dataview/compilation-queue.md",
         "views/dataview/wiki-index.md",
         "views/graph/README.md",
         "shared/research.md",
@@ -222,3 +313,87 @@ def test_starter_vault_structure_exists():
 
     for relative_path in expected_paths:
         assert (root / relative_path).exists(), relative_path
+
+
+def test_cli_import_compile_and_export_pipeline(tmp_path, monkeypatch, capsys):
+    source_pdf = tmp_path / "MemoryGraft.pdf"
+    source_pdf.write_bytes(b"%PDF-1.4 fake pdf bytes")
+    monkeypatch.setattr(
+        "brain_graph.import_paper.extract_pdf_text",
+        lambda path: ExtractedPaper(
+            title="MemoryGraft",
+            authors=["Alice"],
+            abstract="Prompt injection benchmark abstract.",
+            full_text="MemoryGraft\nAlice\nAbstract\nPrompt injection benchmark abstract.",
+            extractor="pdftotext",
+        ),
+    )
+    monkeypatch.chdir(tmp_path)
+
+    assert main(["import-paper", "--pdf", str(source_pdf)]) == 0
+    assert main(["compile-paper", "--slug", "memorygraft"]) == 0
+    assert main(["export-graph"]) == 0
+
+    captured = capsys.readouterr()
+    assert str(tmp_path / "raw" / "papers" / "2026-04-20-memorygraft.md") in captured.out
+    assert str(tmp_path / "wiki" / "papers" / "MemoryGraft.md") in captured.out
+    assert str(tmp_path / "views" / "canvas" / "starter.canvas") in captured.out
+    assert (tmp_path / "views" / "canvas" / "starter.canvas").exists()
+    assert captured.err == ""
+
+
+def test_cli_discover_papers_imports_results(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(
+        "brain_graph.cli.discover_papers",
+        lambda query, provider, limit: [
+            DiscoveredPaper(
+                title="MemoryGraft",
+                abstract="Prompt injection benchmark abstract.",
+                authors=["Alice"],
+                year=2026,
+                paper_url="https://arxiv.org/abs/2512.16962",
+                pdf_url="https://arxiv.org/pdf/2512.16962",
+                external_ids={"ArXiv": "2512.16962"},
+                source_provider="arxiv",
+                source_query=query,
+            )
+        ],
+    )
+    monkeypatch.chdir(tmp_path)
+
+    assert main(["discover-papers", "--query", "prompt injection", "--provider", "arxiv", "--limit", "1"]) == 0
+
+    captured = capsys.readouterr()
+    assert str(tmp_path / "raw" / "papers" / "2026-04-20-memorygraft.md") in captured.out
+    assert (tmp_path / "raw" / "metadata" / "papers" / "memorygraft.json").exists()
+    assert captured.err == ""
+
+
+def test_cli_research_loop_runs_discovery_to_summary(tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(
+        "brain_graph.research_loop.discover_papers",
+        lambda query, provider, limit: [
+            DiscoveredPaper(
+                title="AgentShield",
+                abstract="Defense benchmark abstract.",
+                authors=["Carol"],
+                year=2026,
+                paper_url="https://example.com/agentshield",
+                pdf_url=None,
+                external_ids={"CorpusId": "123"},
+                source_provider="semantic-scholar",
+                source_query=query,
+            )
+        ],
+    )
+    monkeypatch.chdir(tmp_path)
+
+    assert main(["research-loop", "--query", "agent defense", "--provider", "both", "--limit", "1"]) == 0
+
+    captured = capsys.readouterr()
+    research_path = tmp_path / "shared" / "research.md"
+    assert str(tmp_path / "wiki" / "papers" / "AgentShield.md") in captured.out
+    assert research_path.exists()
+    assert "AgentShield" in research_path.read_text(encoding="utf-8")
+    assert (tmp_path / "views" / "canvas" / "starter.canvas").exists()
+    assert captured.err == ""

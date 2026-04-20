@@ -151,6 +151,70 @@ def test_unresolved_relation_reference_is_reported(tmp_path):
     )
 
 
+def test_duplicate_concept_aliases_are_reported(tmp_path):
+    _copy_fixture(tmp_path, "wiki/concepts/Semantic Imitation.md")
+    other_concept = tmp_path / "wiki" / "concepts" / "Prompt Injection.md"
+    other_concept.parent.mkdir(parents=True, exist_ok=True)
+    other_concept.write_text(
+        dump_frontmatter(
+            {
+                "id": "concept-prompt-injection",
+                "title": "Prompt Injection",
+                "node_type": "concept",
+                "status": "seed",
+                "tags": ["compiled"],
+                "created": "2026-04-20",
+                "updated": "2026-04-20",
+                "source_refs": [],
+                "related": [],
+                "aliases": ["Shared Alias"],
+                "parent_concepts": [],
+                "paper_refs": ["MemoryGraft"],
+                "method_refs": [],
+            }
+        )
+        + "\n\n# Prompt Injection\n",
+        encoding="utf-8",
+    )
+    _rewrite_fixture(
+        tmp_path,
+        "wiki/concepts/Semantic Imitation.md",
+        mutate_frontmatter=lambda frontmatter: frontmatter.__setitem__("aliases", ["Shared Alias"]),
+    )
+
+    issues = collect_issues(tmp_path)
+
+    assert any("duplicate alias: Shared Alias" in issue for issue in issues)
+
+
+def test_orphaned_generated_notes_are_reported(tmp_path):
+    orphan_author = tmp_path / "wiki" / "authors" / "Carol Researcher.md"
+    orphan_author.parent.mkdir(parents=True, exist_ok=True)
+    orphan_author.write_text(
+        dump_frontmatter(
+            {
+                "id": "author-carol-researcher",
+                "title": "Carol Researcher",
+                "node_type": "author",
+                "status": "seed",
+                "tags": ["compiled"],
+                "created": "2026-04-20",
+                "updated": "2026-04-20",
+                "source_refs": [],
+                "related": [],
+                "affiliation": None,
+                "paper_refs": [],
+            }
+        )
+        + "\n\n# Carol Researcher\n",
+        encoding="utf-8",
+    )
+
+    issues = collect_issues(tmp_path)
+
+    assert any("orphaned generated author note" in issue for issue in issues)
+
+
 def test_lint_cli_reports_ok_for_clean_input(tmp_path, monkeypatch, capsys):
     _seed_clean_wiki(tmp_path)
     monkeypatch.chdir(tmp_path)

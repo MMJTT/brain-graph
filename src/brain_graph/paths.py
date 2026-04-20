@@ -14,3 +14,14 @@ def raw_path_for_kind(project_root, kind: str, slug: str, date_text: str) -> Pat
     directory = RAW_DIRECTORY_BY_KIND[kind]
     return Path(project_root) / "raw" / directory / f"{date_text}-{slug}.md"
 
+
+def raw_asset_path_for_paper(project_root, slug: str, suffix: str) -> Path:
+    return Path(project_root) / "raw" / "assets" / "papers" / f"{slug}{suffix}"
+
+
+def raw_metadata_path_for_paper(project_root, slug: str) -> Path:
+    return Path(project_root) / "raw" / "metadata" / "papers" / f"{slug}.json"
+
+
+def raw_text_path_for_paper(project_root, slug: str) -> Path:
+    return Path(project_root) / "raw" / "metadata" / "papers" / f"{slug}.txt"
